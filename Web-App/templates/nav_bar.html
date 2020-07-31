@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<body>
+
+      <nav class="nav-menu d-none d-lg-block">
+          <ul>
+          <li><a href="{{ url_for('index') }}">HOME</a></li>
+          <li><a href="{{ url_for('about') }}">ABOUT US</a></li>
+          <li class="drop-down"><a>OUR SERVICES</a>
+            <ul>
+              <li><a href="{{ url_for('services_tryon') }}">TRY IT ON YOURSELF</a></li>
+              <li><a href="{{ url_for('services_sizep') }}">YOUR PERFECT SIZE FIT</a></li>
+              <!-- <li><a href="#">MASK IT ON</a></li> -->
+            </ul>
+          </li>
+          <li class="drop-down"><a>PORTFOLIO</a>
+            <ul>
+              <li><a href="{{ url_for('party') }}">TRENDINGS</a></li>
+              <li><a href="{{ url_for('sports') }}">SPORTS</a></li>
+              <li><a href="{{ url_for('brands') }}">BRANDS & U</a></li>
+              <li><a href="{{ url_for('casuals') }}">CASUALS</a></li>
+            </ul>
+          </li>          
+          <li><a href="{{ url_for('blog') }}">BLOG</a></li>
+          <li><a href="{{ url_for('contact') }}">CONTACT</a></li>
+
+          </ul>
+      </nav><!-- .nav-menu -->
+
+    
+  <div class="container", align="right">
+      {% block content %}
+      {% endblock %}
+  </div>
+</body>
+</html>
